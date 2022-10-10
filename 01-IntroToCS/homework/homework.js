@@ -1,34 +1,40 @@
-'use strict'
+"use strict";
 
 function BinarioADecimal(num) {
-  let binario = 0; 
-  
-    for (let i = 0; i < num.length; i++) { 
-       binario += +num[i] * 2 ** (num.length - 1 - i); 
-    }
-    return binario;
+  // tu codigo aca
+  let res = 0
+  let array = []
+
+  for (let i = 0; i < num.length; i++){
+    array.unshift(num[i])
+  }
+  for (let i = 0; i < array.length; i++){
+    res = res + Math.pow(2,i) * array[i]
+  }
+  return res
 }
 
 
 function DecimalABinario(num) {
   // tu codigo aca
-  let salidaBinaria = '';
-  if (num != 0) {
-    let decimal = num;
-    while (decimal != 0) {
-      salidaBinaria = (decimal % 2) + salidaBinaria;
-      decimal = Math.floor(decimal/2);
+  let array = []
+  let str = ""
+  for (let i = 0; i < 9999; i++){
+    if (num < 1){
+      break;
     }
-  } else { salidaBinaria = "0";}
-  return salidaBinaria;
+    let a = num % 2;
+    array.unshift(a);
+    num = Math.floor(num / 2)
+ 
 }
-
-
-
-
-
+  for (let i = 0; i < array.length; i++){
+    str = str + array[i]
+}
+return str
+}
 
 module.exports = {
   BinarioADecimal,
   DecimalABinario,
-}
+};
