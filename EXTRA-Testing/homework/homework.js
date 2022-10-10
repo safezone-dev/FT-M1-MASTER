@@ -44,7 +44,7 @@ function checkSeatStatus(row, num) {
   const rowPosition = getRowNumber(row);
   const column = layout[rowPosition];
   const seat = column[num];
-  return seat.booked; //true o false --> booleano
+  return seat.booked; 
 }
 
 function getRowNumber(letter) {
