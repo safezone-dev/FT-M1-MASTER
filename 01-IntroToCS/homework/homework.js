@@ -1,7 +1,7 @@
 "use strict";
 
 function BinarioADecimal(num) {
-  // tu codigo aca
+  // tu codigo aca **
   let res = 0
   let array = []
 
